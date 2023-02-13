@@ -33,6 +33,13 @@
     "bloodstock-e2e": {
       "tags": [],
       "implicitDependencies": ["bloodstock"]
+    },
+    "mobile": {
+      "tags": []
+    },
+    "mobile-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mobile"]
     }
   }
 }
