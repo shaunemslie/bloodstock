@@ -131,7 +131,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/mobile",
+            "outputPath": "apps/mobile/public",
             "index": "apps/mobile/src/index.html",
             "main": "apps/mobile/src/main.ts",
             "polyfills": "apps/mobile/src/polyfills.ts",
