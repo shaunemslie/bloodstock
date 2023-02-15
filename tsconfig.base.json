@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@bloodstock/interfaces": ["libs/shared/interfaces/index.ts"],
+      "@bloodstock/mobile/browse/feature/browse": [
+        "libs/mobile/browse/feature/browse/src/index.ts"
+      ],
+      "@bloodstock/mobile/home/feature/home": [
+        "libs/mobile/home/feature/home/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

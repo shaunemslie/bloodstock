@@ -37,9 +37,15 @@
     "mobile": {
       "tags": []
     },
+    "mobile-browse-feature-browse": {
+      "tags": []
+    },
     "mobile-e2e": {
       "tags": [],
       "implicitDependencies": ["mobile"]
+    },
+    "mobile-home-feature-home": {
+      "tags": []
     }
   }
 }

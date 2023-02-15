@@ -7,7 +7,11 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "dev:ssr": "ng run mobile:serve-ssr",
+    "serve:ssr": "node dist/apps/mobile/server/main.js",
+    "build:ssr": "ng build && ng run mobile:server",
+    "prerender": "ng run mobile:prerender"
   },
   "private": true,
   "dependencies": {
@@ -15,14 +19,19 @@
     "@angular/common": "^12.2.0",
     "@angular/compiler": "^12.2.0",
     "@angular/core": "^12.2.0",
+    "@angular/fire": "6.1.5",
     "@angular/forms": "^12.2.0",
     "@angular/platform-browser": "^12.2.0",
     "@angular/platform-browser-dynamic": "^12.2.0",
+    "@angular/platform-server": "^12.2.0",
     "@angular/router": "^12.2.0",
     "@capacitor/core": "^3.2.5",
     "@ionic/angular": "^5.8.3",
+    "@nguniversal/express-engine": "^12.1.3",
+    "@ngxs/store": "^3.7.6",
     "@nrwl/angular": "12.10.1",
-    "firebase": "^9.5.0",
+    "express": "^4.15.2",
+    "firebase": "8.10.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
@@ -38,6 +47,7 @@
     "@capacitor/android": "^3.2.5",
     "@capacitor/cli": "^3.2.5",
     "@capacitor/ios": "^3.2.5",
+    "@nguniversal/builders": "^12.1.3",
     "@nrwl/cli": "12.10.1",
     "@nrwl/cypress": "12.10.1",
     "@nrwl/eslint-plugin-nx": "12.10.1",
@@ -49,6 +59,7 @@
     "@nxtend/capacitor": "^12.0.0",
     "@nxtend/firebase": "^12.1.0",
     "@nxtend/ionic-angular": "^12.1.0",
+    "@types/express": "^4.17.0",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
     "@typescript-eslint/eslint-plugin": "~4.31.1",
@@ -61,6 +72,6 @@
     "jest-preset-angular": "10.0.1",
     "prettier": "^2.3.1",
     "ts-jest": "27.0.5",
-    "typescript": "~4.3.5"
+    "typescript": "~4.3.2"
   }
 }

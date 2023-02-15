@@ -24,11 +24,7 @@
   },
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
@@ -53,7 +49,7 @@
       "port": 9000
     },
     "hosting": {
-      "port": 5000
+      "port": 8081
     },
     "pubsub": {
       "port": 8085

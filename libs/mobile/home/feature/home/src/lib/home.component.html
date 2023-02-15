@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [forceOverscroll]="true">
+  <ion-refresher
+    slot="fixed"
+    [disabled]="false"
+    (ionRefresh)="handleRefresh($event)"
+  >
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-item>
+    <ion-label>Recent listings from the lofts you're following</ion-label>
+  </ion-item>
+
+  <ion-list>
+    <ng-container *ngIf="listings$ | async as listings">
+      <ion-item *ngFor="let listing of listings; trackBy: trackListings">
+        <ion-label>{{ listing.ring }}</ion-label>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+
+  <!-- <ion-list> -->
+  <!--   <ion-item *ngFor="let item of items | async; let index"> -->
+  <!--     <ion-avatar slot="start"> -->
+  <!--       <img -->
+  <!--         [src]="'https://picsum.photos/80/80?random=' + index" -->
+  <!--         alt="avatar" -->
+  <!--       /> -->
+  <!--     </ion-avatar> -->
+  <!--     <ion-label>{{ item }}</ion-label> -->
+  <!--   </ion-item> -->
+  <!-- </ion-list> -->
+
+  <ion-infinite-scroll (ionInfinite)="handleInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
